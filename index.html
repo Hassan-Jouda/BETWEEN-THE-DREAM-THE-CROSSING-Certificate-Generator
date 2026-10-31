@@ -149,7 +149,7 @@ Another Volunteer,Media and Public Relations Committee,1 YEAR,no,2026-10-30"></t
           <rect x="204.5" y="620" width="132" height="132" rx="6" fill="#ffffff" stroke="#d8ccb2" stroke-width="1"/>
           <g id="qrCode" aria-label="QR code containing the certificate details as plain text"></g>
         </g>
-        <image id="sirajSign" x="466" y="626" width="240" height="52" preserveAspectRatio="xMidYMid meet"/>
+        <text id="sirajSignText" x="586" y="664" text-anchor="middle" font-family="'Brush Script MT','Segoe Script',cursive" font-size="44" font-style="italic" fill="#243c35">Serag</text>
         <line x1="466" y1="679" x2="706" y2="679" stroke="#84755c" stroke-width="0.9"/>
         <g text-anchor="middle" font-family="Arial,'Noto Sans',sans-serif" fill="#1a3d2d" font-weight="700" font-size="11">
           <text x="586" y="700">Student Committee Representative</text>
@@ -1431,7 +1431,7 @@ const ASSETS={logo:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA3wAAAKuCAYAAA
 /* All certificate artwork, signatures and QR generation are embedded for offline use. */
 const $=(q)=>document.querySelector(q), ns='http://www.w3.org/2000/svg';
 $('#headLogo').src=ASSETS.logo;
-[['#logo','logo'],['#watermark','watermark'],['#sirajSign','siraj']].forEach(([selector,key])=>$(selector).setAttribute('href',ASSETS[key]));
+[['#logo','logo'],['#watermark','watermark']].forEach(([selector,key])=>$(selector).setAttribute('href',ASSETS[key]));
 const fields={name:$('#name'),position:$('#position'),service:$('#service'),council:$('#council'),date:$('#dateInput'),type:$('#descriptionPreset'),custom:$('#customDescription')};
 const positionPreset=$('#positionPreset');
 const clean=(s,max=120)=>String(s||'').replace(/[\u0000-\u001f\u007f]/g,' ').replace(/\s+/g,' ').trim().slice(0,max);
